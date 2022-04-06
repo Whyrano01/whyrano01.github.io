@@ -4,7 +4,7 @@ body, p { margin: 0; }
 #box1 {
     position: relative;
     width: 100vw;
-    height: 56.25vw;
+    height: 56.25vw;  /* 16:9 = 100:x -> 16x=900 (화면 비율 계산식)*/
     left: 0;
     top: 0;
     background-color: #000000;
@@ -14,12 +14,12 @@ body, p { margin: 0; }
     height: 100%;
 }
 #box1 > p {
-    position: absolute;
+    position: absolute; /* 레이어 상단에서 보이기 */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; /* top left transform 세트로 많이 사용 */
+    transform: translate(-50%, -50%); /* 텍스트 이미지 시작점을 옮겨서 중앙부로 오게 하는것 */
     font-family: 'Oswald', sans-serif;
-    font-size: 5vw;
-    color: rgba(255, 255, 255, 0.0);
-    -webkit-text-stroke: 1px #ffffff;
+    font-size: 5vw; /* 화면 비율에 맞게 적용(뷰포트) */
+    color: rgba(255, 255, 255, 0.0); /* 텍스트 색상 rgb */
+    -webkit-text-stroke: 1px #ffffff; /*텍스트 외각선*/
 }
